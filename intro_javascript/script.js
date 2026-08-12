@@ -1,3 +1,67 @@
+//objeetos javascript
+//objeto JSON (Javascript Object Notation)
+
+// calculadora de soma e subtração
+const calculadora = {
+    somar: function(a, b){
+        return a + b
+    },
+    subtrair: (a, b) => a + b
+}
+
+console.log(calculadora.somar(2, 3))
+console.log(calculadora.subtrair(5, 4))
+
+//Concessionária
+/*let concessionaria = {
+    cnpj: "12345678910",
+    endereco: {
+        rua: "A",
+        bairro: "abc",
+        numero: 12
+    },
+    veiculos: [
+        {
+            marca: 'vw',
+            modelo: 'Fusca',
+            ano: 1999
+        },
+        {
+            marca: 'Ford',
+            modelo: 'Ka',
+            ano: 2005
+        },
+    ]
+}
+for(let veiculo of concessionaria.veiculos){
+    console.log(concessionaria.veiculos)
+}*/
+
+//Uma pessoa que se chama Maria, tem 21 anos e mora na rua B, número 20
+/*let pessoa = {
+    nome: "Maria",
+    idade: 21,
+    endereco: {
+        rua: "B",
+        numero: 20
+    }
+}
+
+console.log("Rua: " + pessoa.endereco.rua)
+console.log("Numero: ", + pessoa['endereco']['numero'])
+console.log("Rua: " + pessoa.endereco['rua'])
+console.log("Número: " + pessoa['endereco'].numero)*/
+
+// Uma pessoa e se cham João e tem 17 anos
+/*let pessoa = { //objeto javascript pessoa
+    nome: "João", //par chave valor
+    idade: 17
+}
+
+console.log(pessoa.nome)
+console.log(pessoa['idade'])*/
+
+
 /*function eAgora(){
     let cont = 1
     function f1(){
