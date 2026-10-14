@@ -8,7 +8,6 @@
 // const url = `https://api.openweathermap.org/data/2.5/forecast?appid=${appid}&q=${q}&units=${units}&lang=${lang}&cnt=${cnt}`
 
 // axios.get(url)
-
 // .then(res => {
 //     console.log(res.data)
 //     console.log("********************")

@@ -8,7 +8,10 @@ const funcoes = {
     LembreteCriado: (lembrete) => {
         baseConsulta[lembrete.id] = lembrete
     },
-    ObservacaoCriada: (observacao) => {
+    LembreteApagado: (id) => {
+        delete baseConsulta[id]
+    },
+    observacaoCriada: (observacao) => {
         //pegar a lista de observações do lembrete a que a observação recebida pertence ou
         // uma lista vazia, caso o lembrete não tenha observação nenhuma
         const observacoes = baseConsulta[observacao.lembreteId]['observacoes'] || []

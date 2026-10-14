@@ -36,6 +36,16 @@ app.post("/lembretes", async (req, res) => {
     res.json({mensagem: 'ok'})
 })
 
+app.delete("/lembretes/:id", async (req, res) => {
+  const id = req.params.id  
+  delete lembretes[id]
+    await axios.post('http://localhost:10000/eventos', {
+        tipo: 'LembreteApagado',
+        dados: id
+    })
+    res.json({mensagem: 'ok'})
+})
+
 //GET /lembretes usando uma função regular (function)
 app.get("/lembretes", function(req, res){
     res.json(lembretes)
