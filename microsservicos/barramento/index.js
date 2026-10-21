@@ -6,14 +6,23 @@ app.use(express.json())
 
 //definir esse endpoint
 //  POST /eventos
-app.post('/eventos', (req, res) => {
+app.post('/eventos', async (req, res) => {
 //pegar o corpo da requisição
 const evento = req.body
 console.log(evento)
 //enviar via post para todos os mss
-axios.post('http://localhost:4000/eventos', evento)
-axios.post('http://localhost:5000/eventos', evento)
-axios.post('http://localhost:6000/eventos', evento)
+try{
+    await axios.post('http://localhost:4000/eventos', evento)
+}catch(e){}
+try{
+    await axios.post('http://localhost:5000/eventos', evento)
+}catch(e){}
+try{
+    await axios.post('http://localhost:6000/eventos', evento)
+}catch(e){}
+try{
+    await axios.post('http://localhost:7000/eventos', evento)
+}catch(e){}
 res.end()
 })
 
